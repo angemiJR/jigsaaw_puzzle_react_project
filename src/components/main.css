@@ -6,11 +6,12 @@
     align-items: center;
 }
 nav {
-    width: 100%;
+    width: 80%;
     height: 15vh;
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 nav img {
@@ -39,4 +40,11 @@ nav ul li a {
     color: #570206;
     margin-top: 10px;
     text-align: center;
+}
+
+.item_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
