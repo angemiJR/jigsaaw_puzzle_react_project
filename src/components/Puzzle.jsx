@@ -1,5 +1,6 @@
 
 import "../components/Puzzle.css";
+import Button from "../components/Button.jsx";
 
 function Puzzle(props) {
     return (<>
@@ -8,6 +9,7 @@ function Puzzle(props) {
             <h2 className="tittle">{props.tittle} jingsaw puzzle</h2>
             <h3 className="price">{props.price}</h3>
             <p className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero laudantium repellendus placeat esse deleniti a quisquam voluptatem minima sit. Obcaecati necessitatibus ipsa quo! Dolorum eligendi dolorem repellat possimus neque quia.</p>
+     <Button></Button>
         </div>
     </>)
 

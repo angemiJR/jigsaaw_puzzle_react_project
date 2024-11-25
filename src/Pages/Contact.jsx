@@ -2,7 +2,13 @@
 function Contact(){
     return(
         <>
-        <div>contact page</div>
+        <div className="main">contact page
+
+
+
+
+            
+        </div>
         </>
         );
 

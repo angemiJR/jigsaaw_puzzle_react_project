@@ -1,8 +1,14 @@
-
+import "../components/main.css";
 function About(){
     return(
     <>
-    <div>About page</div>
+    <div className="main">About page
+
+
+
+
+        
+    </div>
     </>
     );
 }

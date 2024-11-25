@@ -48,3 +48,31 @@ nav ul li a {
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+.btn_section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
+.btn_section button {
+    background-color: white;
+    border: none;
+
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 36px;
+    color: #570206;
+    text-align: center;
+
+}
+
+.btn_section h3{
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: #570206;
+    text-align: center;
+}
