@@ -1,15 +1,16 @@
 import "../components/main.css";
-function About(){
-    return(
-    <>
-    <div className="main">About page
+import ColorPicker from "../components/ColorPicker.jsx";
+function About() {
+    return (
+        <>
+            <div className="main">
 
 
+                <ColorPicker></ColorPicker>
 
 
-        
-    </div>
-    </>
+            </div>
+        </>
     );
 }
 
