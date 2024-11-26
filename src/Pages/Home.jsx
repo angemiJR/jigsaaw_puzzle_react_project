@@ -14,12 +14,12 @@ function Home() {
           <div className="main">
          
             <div className="item_container">
-              <Puzzle tittle="Bear" price="9,99$" img={Bear} alt="puzzle bear picture"></Puzzle>
-              <Puzzle tittle="Cat" price="19,99$" img={Cat} alt="puzzle cat picture"></Puzzle>
-              <Puzzle tittle="Colibri birds" price="29,99$" img={Birds} alt="puzzle birds picture"></Puzzle>
-              <Puzzle tittle="Corgi dog" price="9,99$" img={Corgi} alt="puzzle corgi picture"></Puzzle>
-              <Puzzle tittle="Fish" price="9,99$" img={Fish} alt="puzzle fish picture"></Puzzle>
-              <Puzzle tittle="Dachsund dog" price="9,99$" img={Dachsund} alt="puzzle Dachsund picture"></Puzzle>
+              <Puzzle tittle="Bear" price={9.99} img={Bear} alt="puzzle bear picture"></Puzzle>
+              <Puzzle tittle="Cat" price={19.99} img={Cat} alt="puzzle cat picture"></Puzzle>
+              <Puzzle tittle="Colibri birds" price={29.99} img={Birds} alt="puzzle birds picture"></Puzzle>
+              <Puzzle tittle="Corgi dog" price={5.99} img={Corgi} alt="puzzle corgi picture"></Puzzle>
+              <Puzzle tittle="Fish" price={8.99} img={Fish} alt="puzzle fish picture"></Puzzle>
+              <Puzzle tittle="Dachsund dog" price={7.99} img={Dachsund} alt="puzzle Dachsund picture"></Puzzle>
             </div>
     
           </div>
