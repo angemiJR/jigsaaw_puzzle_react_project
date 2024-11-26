@@ -10,6 +10,10 @@ function Button({ price }) {
         if (item > 0) setItem(item - 1);
     };
 
+    const resetItem = () => {
+      setItem(0);
+    };
+
     return (
         <>
             <div className="btn_section">
@@ -17,6 +21,9 @@ function Button({ price }) {
                 <h3>{item}</h3>
                 <button onClick={decrementItem}>-</button>
                 <h3>Total Cost: {(item * price).toFixed(2)} $</h3>
+            </div>
+            <div className="Reset">
+            <button onClick={resetItem}>Reset</button>
             </div>
         </>
     );
