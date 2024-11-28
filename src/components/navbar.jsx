@@ -11,7 +11,7 @@ return (
       <ul>
         <li> <Link to="/">Home</Link></li>
         <li><Link to="/about">Color Picker</Link></li>
-        <li> <Link to="/contact">Contact</Link></li>
+        <li> <Link to="/contact">To do list</Link></li>
       </ul>
     </div>
   </nav>
