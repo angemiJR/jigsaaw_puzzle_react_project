@@ -22,7 +22,7 @@ import { useState } from "react";
 import "../components/Contatct.css"
 
 function Contact() {
-    const [tasks, setTasks] = useState(["one", "two", "three"]);
+    const [tasks, setTasks] = useState([]);
     function addTask() {
         const newTask = document.getElementById("taskInput").value;
         document.getElementById("taskInput").value = "";
@@ -33,6 +33,26 @@ function Contact() {
     function removeTask(index){
         setTasks(tasks.filter((_, i) => i!== index));
     }
+
+    function upTask(index){
+        if (index > 0){
+            const temp = tasks[index];
+            tasks[index] = tasks[index - 1];
+            tasks[index - 1] = temp;
+            setTasks([...tasks]);
+        }
+
+    }
+
+    function downTask(index){
+        if (index < tasks.length - 1){
+            const temp = tasks[index];
+            tasks[index] = tasks[index + 1];
+            tasks[index + 1] = temp;
+            setTasks([...tasks]);
+        }
+    }
+
 
     return (
         <>
@@ -46,7 +66,10 @@ function Contact() {
                         {tasks.map((task, index) =>
                             <li key={index}> {task}
                                 <button onClick={() => removeTask(index)}>Remove</button>
+                                <button onClick={() => upTask(index)}>Move up</button>
+                                <button onClick={() => downTask(index)}>Move down</button>
                             </li>)}
+                            
                     </ul>
 
 
