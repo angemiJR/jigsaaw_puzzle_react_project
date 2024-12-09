@@ -23,33 +23,33 @@ import "../components/Contatct.css"
 
 function Contact() {
     const [tasks, setTasks] = useState([]);
+    const [newTask, setNewTask] = useState("");
+
     function addTask() {
-        const newTask = document.getElementById("taskInput").value;
-        document.getElementById("taskInput").value = "";
-        setTasks(t => [...t, newTask])
+        if (newTask.trim() === "") return; 
+        setTasks((prevTasks) => [...prevTasks, newTask.trim()]);
+        setNewTask(""); 
 
     }
 
-    function removeTask(index){
-        setTasks(tasks.filter((_, i) => i!== index));
+    function removeTask(index) {
+        setTasks((prevTasks) => prevTasks.filter((_, i) => i !== index));
     }
 
-    function upTask(index){
-        if (index > 0){
-            const temp = tasks[index];
-            tasks[index] = tasks[index - 1];
-            tasks[index - 1] = temp;
-            setTasks([...tasks]);
+    function upTask(index) {
+        if (index > 0) {
+            const updatedTasks = [...tasks];
+            [updatedTasks[index - 1], updatedTasks[index]] = [updatedTasks[index], updatedTasks[index - 1]];
+            setTasks(updatedTasks);
         }
 
     }
 
-    function downTask(index){
-        if (index < tasks.length - 1){
-            const temp = tasks[index];
-            tasks[index] = tasks[index + 1];
-            tasks[index + 1] = temp;
-            setTasks([...tasks]);
+    function downTask(index) {
+        if (index < tasks.length - 1) {
+            const updatedTasks = [...tasks];
+            [updatedTasks[index], updatedTasks[index + 1]] = [updatedTasks[index + 1], updatedTasks[index]];
+            setTasks(updatedTasks);
         }
     }
 
@@ -58,18 +58,24 @@ function Contact() {
         <>
             <div className="main">
                 <div>
-                   <div className="enter"> <input type="text" placeholder="Enter your task" id="taskInput" />
-                    <button onClick={addTask}>Add task</button>
+                    <div className="enter">
+                        <input type="text"
+                            placeholder="Enter your task"
+                            id="taskInput"
+                            value={newTask}
+                            onChange={(e) => setNewTask(e.target.value)} />
+
+                        <button onClick={addTask}>Add task</button>
                     </div>
                     <ul>
-                       
+
                         {tasks.map((task, index) =>
                             <li key={index}> {task}
                                 <button onClick={() => removeTask(index)}>Remove</button>
                                 <button onClick={() => upTask(index)}>Move up</button>
                                 <button onClick={() => downTask(index)}>Move down</button>
                             </li>)}
-                            
+
                     </ul>
 
 
